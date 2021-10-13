@@ -1,12 +1,17 @@
-<h1>{{title}}</h1>
-<div class="message-list">
-   {{#each messages}}
-     <div>
-         <p>{{this.text}}</p>
-         <div>
-            <p>{{this.user}}</p>  
-            <p>{{this.added}}</p>
-         </div>
-     </div>
-   {{/each}} 
+<div>
+  <h1>{{title}}</h1>
+  <a href="/new"><button id="newBtn">Say something!</button></a>
+  <div class="message-list">
+    {{#each messages}}
+      <div class="message">
+        <div class="message-top">
+          <p id="author">{{this.user}}</p>
+        </div>
+        <div class="message-btm">
+          <p id="text">{{this.text}}</p>
+          <small>Submitted on: {{this.added}}</small>
+        </div>
+      </div>
+    {{/each}}
+  </div>
 </div>
